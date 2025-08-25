@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Beldi Concept By Neama</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg position-fixed z-1 col-12 top-0" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-ca5nYm9M6IZVIKcALyllo0hedvv0tj.png" alt="Beldi Concept By Neama" class="logo-img">
+                <span class="brand-text">Beldi Concept</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#apropos">À Propos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Collections
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#femme">Femme</a></li>
+                            <li><a class="dropdown-item" href="#homme">Homme</a></li>
+                            <li><a class="dropdown-item" href="#enfant">Enfant</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#nouveautes">Nouveautés</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#galerie">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar-actions">
+                    <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%20créations%20Beldi%20Concept" 
+                       target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp me-2"></i>Commander
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Catalogue -->
+    <section class="catalogue-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <div class="section-badge">
+                        <i class="fas fa-th-large me-2"></i>Catalogue
+                    </div>
+                    <h1 class="section-title">Nos Collections</h1>
+                    <p class="section-subtitle">
+                        Découvrez toutes nos créations exclusives de prêt-à-porter traditionnel marocain
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="py-3 bg-light sticky-top" style="top: 100px; z-index: 100;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="filter-buttons">
+                        <button class="btn btn-filter active" data-filter="all">Tout</button>
+                        <button class="btn btn-filter" data-filter="nouveautes">Nouveautés</button>
+                        <button class="btn btn-filter" data-filter="femme">Femme</button>
+                        <button class="btn btn-filter" data-filter="homme">Homme</button>
+                        <button class="btn btn-filter" data-filter="enfant">Enfant</button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="results-count">Affichage de <span id="count">24</span> articles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nouveautés 2025 -->
+    <section class="py-5" id="nouveautes">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-star me-2"></i>Nouveautés 2025
+                </div>
+                <h2 class="section-title">Créations Exclusives</h2>
+                <p class="section-subtitle">Nos dernières créations uniques</p>
+            </div>
+            
+            <div class="row g-4" id="nouveautes-grid">
+                <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/PINK.jpeg" class="card-img-top" alt="Caftan Moderne">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Caftan%20Moderne%20Vert" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Caftan Moderne Vert</h5>
+                            <p class="card-text">Caftan contemporain avec broderies traditionnelles vertes sur fond beige.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Broderie Main</span>
+                                <span class="feature-tag"><i class="fas fa-scissors me-1"></i>Sur Mesure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-26%20at%2013.58.25%20%281%29-7d1e3QKsbEDM0qAfpN0UFTYzlMHV2O.jpeg" class="card-img-top" alt="Robe Traditionnelle">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Robe%20Traditionnelle%20Beige" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Robe Traditionnelle Beige</h5>
+                            <p class="card-text">Robe élégante avec motifs verts brodés et ceinture assortie.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-palette me-1"></i>Design Unique</span>
+                                <span class="feature-tag"><i class="fas fa-award me-1"></i>Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-26%20at%2013.58.26%20%282%29-7LQQuzE8lgfdOQoMXkkuJtwpH1aisF.jpeg" class="card-img-top" alt="Kimono Brodé">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Kimono%20Brodé%20Olive" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono Brodé Olive</h5>
+                            <p class="card-text">Kimono long avec broderies florales rouges et finitions raffinées.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-flower me-1"></i>Broderie Florale</span>
+                                <span class="feature-tag"><i class="fas fa-heart me-1"></i>Coup de Cœur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/KIMOONOO MOVE.jpg" class="card-img-top" alt="Kimono Brodé">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Kimono%20Brodé%20Olive" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kimono en Khrib et Soie</h5>
+                            <p class="card-text">Vert émeraude brodé d’argent, finitions lavande.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-flower me-1"></i>Broderie Florale</span>
+                                <span class="feature-tag"><i class="fas fa-heart me-1"></i>Coup de Cœur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes homme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/JB.jpeg" class="card-img-top" alt="Djellaba Design">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Design%20Blanche" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Design Blanche</h5>
+                            <p class="card-text">Djellaba moderne avec design artistique bleu et coupe contemporaine.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Design Artistique</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Tendance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes homme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/JN.jpeg" class="card-img-top" alt="Djellaba Design">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Design%20Blanche" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Design Blanche</h5>
+                            <p class="card-text">Djellaba moderne avec design artistique bleu et coupe contemporaine.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Design Artistique</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Tendance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes homme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/8.jpg" class="card-img-top" alt="Djellaba Design">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Design%20Blanche" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Design Blanche</h5>
+                            <p class="card-text">Djellaba moderne avec design artistique bleu et coupe contemporaine.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Design Artistique</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Tendance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes homme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/Homme.jpeg" class="card-img-top" alt="Djellaba Design">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Design%20Blanche" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Design Blanche</h5>
+                            <p class="card-text">Djellaba moderne avec design artistique bleu et coupe contemporaine.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Design Artistique</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Tendance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Femme -->
+    <section class="py-5 bg-light" id="femme">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-female me-2"></i>Collection Femme
+                </div>
+                <h2 class="section-title">Élégance Féminine</h2>
+                <p class="section-subtitle">Kimonos, Caftans Modernes et Gandouras et plus encore</p>
+            </div>
+            
+            <div class="row g-4" id="femme-grid">
+                <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/11.jpg" class="card-img-top" alt="Tenue Colorée">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Tenue%20Colorée%20Femme" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Tenue Colorée Moderne</h5>
+                            <p class="card-text">Ensemble moderne aux couleurs vives avec accessoires traditionnels.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-palette me-1"></i>Coloré</span>
+                                <span class="feature-tag"><i class="fas fa-sun me-1"></i>Été</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/ARTICLLE ROUGE KIMONO.jpeg" class="card-img-top" alt="Caftan Noir">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Caftan%20Noir%20Traditionnel" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Caftan Noir Traditionnel</h5>
+                            <p class="card-text">Caftan noir élégant avec broderies dorées et argentées traditionnelles.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-crown me-1"></i>Élégant</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Classique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez plus de produits femme ici -->
+                <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/6.jpg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/444.jpeg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/333.jpeg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/ChemisebF.jpeg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/ENSEMBLEB.jpeg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/10.jpg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                       <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/KIMONOO MOVE.jpeg " class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      
+                            <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/2.jpg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/7.jpg" class="card-img-top" alt="Takchita Luxe">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Takchita%20Luxe" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Takchita Luxe</h5>
+                            <p class="card-text">Takchita deux pièces avec broderies fines et finitions premium.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Luxe</span>
+                                <span class="feature-tag"><i class="fas fa-ring me-1"></i>Mariage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/5.jpg" class="card-img-top" alt="Gandoura Chic">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Gandoura%20Chic" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="card-body">
+                            <h5 class="card-title">Gandoura Chic</h5>
+                            <p class="card-text">Gandoura moderne et confortable pour le quotidien élégant.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-leaf me-1"></i>Confort</span>
+                                <span class="feature-tag"><i class="fas fa-home me-1"></i>Quotidien</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Homme -->
+    <section class="py-5" id="homme">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-male me-2"></i>Collection Homme
+                </div>
+                <h2 class="section-title">Distinction Masculine</h2>
+                <p class="section-subtitle">Djellabas, Jabadors et tenues traditionnelles</p>
+            </div>
+            
+            <div class="row g-4" id="homme-grid">
+                <div class="col-lg-3 col-md-6 product-item" data-category="homme" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/24.jpg" class="card-img-top" alt="Djellaba Classique">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Classique" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Classique</h5>
+                            <p class="card-text">Djellaba traditionnelle en coton fin, idéale pour toutes occasions.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-leaf me-1"></i>Coton</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Classique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="homme" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/JJ.jpeg" class="card-img-top" alt="Jabador Élégant">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20le%20Jabador%20Élégant" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jabador Élégant</h5>
+                            <p class="card-text">Jabador raffiné pour occasions spéciales et cérémonies.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-crown me-1"></i>Élégant</span>
+                                <span class="feature-tag"><i class="fas fa-calendar me-1"></i>Cérémonie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="homme" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/ARTICLE HOMME.jpeg" class="card-img-top" alt="Gandoura Homme">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Gandoura%20Homme" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Gandoura Homme</h5>
+                            <p class="card-text">Gandoura confortable et stylée pour le quotidien.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-home me-1"></i>Quotidien</span>
+                                <span class="feature-tag"><i class="fas fa-leaf me-1"></i>Confort</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="homme" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/JACKET HOMME (1).jpeg" class="card-img-top" alt="Ensemble Homme">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20l'Ensemble%20Homme" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ensemble Complet</h5>
+                            <p class="card-text">Ensemble coordonné avec accessoires traditionnels.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gift me-1"></i>Complet</span>
+                                <span class="feature-tag"><i class="fas fa-medal me-1"></i>Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Enfant -->
+    <section class="py-5 bg-light" id="enfant">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-child me-2"></i>Collection Enfant
+                </div>
+                <h2 class="section-title">Petits Princes & Princesses</h2>
+                <p class="section-subtitle">Tenues traditionnelles pour nos petits trésors</p>
+            </div>
+            
+            <div class="row g-4" id="enfant-grid">
+                <div class="col-lg-3 col-md-6 product-item" data-category="enfant" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/enfant chemise.jpeg" class="card-img-top" alt="Caftan Fille">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Caftan%20Fille" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Caftan Petite Princesse</h5>
+                            <p class="card-text">Caftan adorable pour petites filles avec broderies colorées.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-heart me-1"></i>Adorable</span>
+                                <span class="feature-tag"><i class="fas fa-rainbow me-1"></i>Coloré</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="enfant" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/JABADOR  ENFANT.jpeg" class="card-img-top" alt="Djellaba Garçon">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Djellaba%20Garçon" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Djellaba Petit Prince</h5>
+                            <p class="card-text">Djellaba confortable pour garçons avec détails traditionnels.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-crown me-1"></i>Prince</span>
+                                <span class="feature-tag"><i class="fas fa-leaf me-1"></i>Confort</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="enfant" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/22.jpg" class="card-img-top" alt="Ensemble Fille">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20l'Ensemble%20Fille" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ensemble Fête Fille</h5>
+                            <p class="card-text">Ensemble complet pour occasions spéciales et fêtes.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-gift me-1"></i>Fête</span>
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Spécial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 product-item" data-category="enfant" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/21.jpg" class="card-img-top" alt="Jabador Enfant">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Jabador%20Enfant" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jabador Enfant</h5>
+                            <p class="card-text">Jabador miniature pour garçons, parfait pour les cérémonies.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-medal me-1"></i>Cérémonie</span>
+                                <span class="feature-tag"><i class="fas fa-heart me-1"></i>Mignon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 cta-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="cta-title">Vous ne trouvez pas ce que vous cherchez ?</h2>
+                    <p class="cta-description">
+                        Contactez-nous directement sur WhatsApp pour des créations sur mesure ou pour découvrir d'autres modèles disponibles.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20j'aimerais%20voir%20d'autres%20modèles%20ou%20commander%20sur%20mesure" 
+                       target="_blank" class="btn btn-whatsapp btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>Contactez-nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-waves">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-content">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-section">
+                            <div class="footer-logo">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-ca5nYm9M6IZVIKcALyllo0hedvv0tj.png" alt="Logo" class="footer-logo-img">
+                                <h4>Beldi Concept</h4>
+                            </div>
+                            <p class="footer-description">
+                                <strong>Beldi Concept By Neama</strong> - Votre destination pour le prêt-à-porter traditionnel marocain de qualité.
+                            </p>
+                            <div class="social-links">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571" target="_blank" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.instagram.com/beldiconcept_officiel/" target="_blank" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="http://facebook.com/BELDICONCEPT/?locale=fr_FR" target="_blank" class="social-link facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://www.threads.com/@beldiconcept_officiel?hl=de" target="_blank" class="social-link x-twitter">
+                                    <i class="fab fa-x-twitter"></i>
+                                </a>
+                                <a href="https://www.pinterest.com/neamacherdi/" target="_blank" class="social-link pinterest">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Collections</h5>
+                            <ul class="footer-links">
+                                <li><a href="#femme">Femme</a></li>
+                                <li><a href="#homme">Homme</a></li>
+                                <li><a href="#enfant">Enfant</a></li>
+                                <li><a href="#nouveautes">Nouveautés</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="index.html#apropos">À Propos</a></li>
+                                <li><a href="index.html#services">Services</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Contact</h5>
+                            <div class="footer-contact">
+                                <div class="contact-item-footer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <a href="https://api.whatsapp.com/send?phone=212661777571">+212 661-777571</a>
+                                </div>
+                                <div class="contact-item-footer">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:neama.cherdi2@gmail.com">neama.cherdi2@gmail.com</a>
+                                </div>
+                                <div class="contact-item-footer">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Casablanca, Maroc</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            © 2025 <strong>Beldi Concept By Neama</strong>. Tous droits réservés.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="designer">
+                            Design par <a href="https://nouhailatouati.vercel.app/" target="_blank"><strong>Nouhaila Touati</strong></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20vos%20créations%20Beldi%20Concept" 
+       target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="catalogue.js"></script>
+</body>
+</html>
