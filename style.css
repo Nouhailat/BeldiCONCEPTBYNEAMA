@@ -157,7 +157,7 @@ html {
 }
 
 .btn-whatsapp {
-  background: #25D366;
+  background: #25d366;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -168,7 +168,7 @@ html {
 }
 
 .btn-whatsapp:hover {
-  background: #128C7E;
+  background: #128c7e;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
@@ -302,7 +302,7 @@ html {
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .carousel-control-prev {
@@ -582,6 +582,8 @@ html {
   height: 100%;
   background: rgba(0, 128, 128, 0.9);
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -843,12 +845,12 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
-  
+
   .gallery-item:nth-child(1),
   .gallery-item:nth-child(4) {
     grid-row: span 1;
   }
-  
+
   .gallery-item:nth-child(7) {
     grid-column: span 1;
   }
@@ -1002,7 +1004,7 @@ html {
 }
 
 .social-link.whatsapp {
-  background: #25D366;
+  background: #25d366;
 }
 
 .social-link.instagram {
@@ -1142,7 +1144,7 @@ html {
   left: 30px;
   width: 60px;
   height: 60px;
-  background: #25D366;
+  background: #25d366;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1156,7 +1158,7 @@ html {
 }
 
 .whatsapp-float:hover {
-  background: #128C7E;
+  background: #128c7e;
   color: white;
   transform: scale(1.1);
   text-decoration: none;
@@ -1233,7 +1235,11 @@ html {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) translateX(-50%);
   }
   40% {
@@ -1312,22 +1318,22 @@ html {
   body {
     padding-top: 145px;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-  
+
   .contact-info {
     margin-bottom: 2rem;
   }
-  
+
   .filter-buttons {
     justify-content: center;
     margin-bottom: 1rem;
   }
-  
+
   .nav-link,
   .dropdown-item {
     font-size: 0.9rem;
@@ -1342,40 +1348,40 @@ html {
   .service-card {
     padding: 1.5rem;
   }
-  
+
   .service-icon {
     width: 60px;
     height: 60px;
   }
-  
+
   .service-icon i {
     font-size: 1.5rem;
   }
-  
+
   .contact-item {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .footer-content {
     padding: 3rem 0 1.5rem;
   }
-  
+
   .social-links {
     justify-content: center;
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
     width: 50px;
     height: 50px;
   }
-  
+
   .carousel-control-prev {
     left: 15px;
   }
-  
+
   .carousel-control-next {
     right: 15px;
   }
@@ -1385,11 +1391,11 @@ html {
   body {
     padding-top: 170px;
   }
-  
+
   .hero-description {
     font-size: 1.1rem;
   }
-  
+
   .btn-primary-custom,
   .btn-outline-light,
   .btn-outline-custom {
@@ -1397,36 +1403,36 @@ html {
     max-width: 300px;
     justify-content: center;
   }
-  
+
   .product-features {
     justify-content: center;
   }
-  
+
   .whatsapp-float {
     width: 50px;
     height: 50px;
   }
-  
+
   .whatsapp-float i {
     font-size: 1.5rem;
   }
-  
+
   .footer-bottom .row {
     text-align: center;
   }
-  
+
   .footer-bottom .col-md-6:last-child {
     margin-top: 1rem;
   }
-  
+
   .cta-title {
     font-size: 2rem;
   }
-  
+
   .cta-description {
     font-size: 1rem;
   }
-  
+
   .nav-link,
   .dropdown-item {
     font-size: 0.85rem;
@@ -1446,11 +1452,11 @@ html {
   .carousel-control-next {
     display: none !important;
   }
-  
+
   body {
     padding-top: 0;
   }
-  
+
   .hero-section {
     min-height: auto;
     padding: 2rem 0;
@@ -1474,11 +1480,11 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .scroll-indicator {
     animation: none;
   }
-  
+
   .whatsapp-float {
     animation: none;
   }
@@ -1509,4 +1515,83 @@ a:focus {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
+}
+
+/* Product Modal Styles */
+.product-modal-image {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #008080, #20b2aa);
+  color: white;
+  padding: 1.5rem;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.product-badge .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+
+.product-title {
+  color: #2c3e50;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.product-description {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.product-details h6 {
+  color: #2c3e50;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.product-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #6c757d;
+}
+
+.product-info .info-item i {
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-overlay {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-overlay .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .product-modal-image {
+    height: 300px;
+  }
+
+  .modal-dialog {
+    margin: 1rem;
+  }
 }

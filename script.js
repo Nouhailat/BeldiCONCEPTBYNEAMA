@@ -210,6 +210,41 @@ images.forEach((img) => {
   })
 })
 
+// Filter functionality for catalogue
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".btn-filter")
+  const productItems = document.querySelectorAll(".product-item")
+  const countElement = document.getElementById("count")
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove active class from all buttons
+      filterButtons.forEach((btn) => btn.classList.remove("active"))
+      // Add active class to clicked button
+      this.classList.add("active")
+
+      const filterValue = this.getAttribute("data-filter")
+      let visibleCount = 0
+
+      productItems.forEach((item) => {
+        const categories = item.getAttribute("data-category")
+
+        if (filterValue === "all" || categories.includes(filterValue)) {
+          item.style.display = "block"
+          visibleCount++
+        } else {
+          item.style.display = "none"
+        }
+      })
+
+      // Update count
+      if (countElement) {
+        countElement.textContent = visibleCount
+      }
+    })
+  })
+})
+
 // Console welcome message
 console.log("🎉 Beldi Concept By Neama - Site chargé avec succès!")
 console.log("✨ Découvrez nos créations traditionnelles marocaines")
@@ -232,12 +267,12 @@ document.addEventListener("keydown", (e) => {
 })
 
 // Mobile menu close on link click
-document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    const navbarCollapse = document.querySelector('.navbar-collapse')
-    if (navbarCollapse.classList.contains('show')) {
-      const bsCollapse = new bootstrap.Collapse(navbarCollapse)
-      bsCollapse.hide()
+document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const navbarCollapse = document.querySelector(".navbar-collapse")
+    if (navbarCollapse.classList.contains("show")) {
+      const bsCollapse = window.bootstrap.Collapse // Declare bootstrap variable
+      new bsCollapse(navbarCollapse).hide()
     }
   })
 })
@@ -263,7 +298,7 @@ if (lazyImages.length > 0) {
 function animateCounter(element, target, duration = 2000) {
   let start = 0
   const increment = target / (duration / 16)
-  
+
   function updateCounter() {
     start += increment
     if (start < target) {
@@ -273,29 +308,32 @@ function animateCounter(element, target, duration = 2000) {
       element.textContent = target + "+"
     }
   }
-  
+
   updateCounter()
 }
 
 // Initialize counter animation when stats come into view
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const statNumbers = entry.target.querySelectorAll('.stat-number')
-      statNumbers.forEach((stat) => {
-        const text = stat.textContent
-        if (text.includes('500')) {
-          animateCounter(stat, 500)
-        } else if (text.includes('1000')) {
-          animateCounter(stat, 1000)
-        }
-      })
-      statsObserver.unobserve(entry.target)
-    }
-  })
-}, { threshold: 0.5 })
+const statsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const statNumbers = entry.target.querySelectorAll(".stat-number")
+        statNumbers.forEach((stat) => {
+          const text = stat.textContent
+          if (text.includes("500")) {
+            animateCounter(stat, 500)
+          } else if (text.includes("1000")) {
+            animateCounter(stat, 1000)
+          }
+        })
+        statsObserver.unobserve(entry.target)
+      }
+    })
+  },
+  { threshold: 0.5 },
+)
 
-const heroStats = document.querySelector('.hero-stats')
+const heroStats = document.querySelector(".hero-stats")
 if (heroStats) {
   statsObserver.observe(heroStats)
 }

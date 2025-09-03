@@ -91,10 +91,11 @@
                         <button class="btn btn-filter" data-filter="femme">Femme</button>
                         <button class="btn btn-filter" data-filter="homme">Homme</button>
                         <button class="btn btn-filter" data-filter="enfant">Enfant</button>
+                        <button class="btn btn-filter" data-filter="accessoires">Accessoires</button>
                     </div>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <span class="results-count">Affichage de <span id="count">24</span> articles</span>
+                    <span class="results-count">Affichage de <span id="count">29</span> articles</span>
                 </div>
             </div>
         </div>
@@ -117,8 +118,12 @@
                         <div class="card-img-container">
                             <img src="images/PINK.jpeg" class="card-img-top" alt="Caftan Moderne">
                             <div class="card-overlay">
+                                <!-- Added view details button alongside commander button -->
+                                <button class="btn btn-white-custom me-2" onclick="openProductModal('caftan-moderne-vert')">
+                                    <i class="fas fa-eye me-2"></i>Voir Détails
+                                </button>
                                 <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Caftan%20Moderne%20Vert" 
-                                   target="_blank" class="btn btn-white-custom">
+                                   target="_blank" class="btn btn-primary-custom">
                                     <i class="fab fa-whatsapp me-2"></i>Commander
                                 </a>
                             </div>
@@ -140,8 +145,12 @@
                         <div class="card-img-container">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-26%20at%2013.58.25%20%281%29-7d1e3QKsbEDM0qAfpN0UFTYzlMHV2O.jpeg" class="card-img-top" alt="Robe Traditionnelle">
                             <div class="card-overlay">
+                                <!-- Added view details button -->
+                                <button class="btn btn-white-custom me-2" onclick="openProductModal('robe-traditionnelle-beige')">
+                                    <i class="fas fa-eye me-2"></i>Voir Détails
+                                </button>
                                 <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Robe%20Traditionnelle%20Beige" 
-                                   target="_blank" class="btn btn-white-custom">
+                                   target="_blank" class="btn btn-primary-custom">
                                     <i class="fab fa-whatsapp me-2"></i>Commander
                                 </a>
                             </div>
@@ -163,8 +172,12 @@
                         <div class="card-img-container">
                             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-07-26%20at%2013.58.26%20%282%29-7LQQuzE8lgfdOQoMXkkuJtwpH1aisF.jpeg" class="card-img-top" alt="Kimono Brodé">
                             <div class="card-overlay">
+                                <!-- Added view details button -->
+                                <button class="btn btn-white-custom me-2" onclick="openProductModal('kimono-brode-olive')">
+                                    <i class="fas fa-eye me-2"></i>Voir Détails
+                                </button>
                                 <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Kimono%20Brodé%20Olive" 
-                                   target="_blank" class="btn btn-white-custom">
+                                   target="_blank" class="btn btn-primary-custom">
                                     <i class="fab fa-whatsapp me-2"></i>Commander
                                 </a>
                             </div>
@@ -287,6 +300,57 @@
                             <div class="product-features">
                                 <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Design Artistique</span>
                                 <span class="feature-tag"><i class="fas fa-star me-1"></i>Tendance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/veste-chevaux.jpeg" class="card-img-top" alt="Veste Similicuir Chevaux">
+                            <div class="card-overlay">
+                                <button class="btn btn-white-custom me-2" onclick="openProductModal('veste-chevaux')">
+                                    <i class="fas fa-eye me-2"></i>Voir Détails
+                                </button>
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Veste%20en%20Similicuir%20Brodée%20Chevaux" 
+                                   target="_blank" class="btn btn-primary-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Veste Similicuir Brodée Chevaux</h5>
+                            <p class="card-text">Veste en similicuir brodée en 3D de motifs chevaux avec poche en cuir.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-horse me-1"></i>Broderie 3D</span>
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Similicuir</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-6 product-item" data-category="nouveautes femme" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-card new-collection">
+                        <div class="card-img-container">
+                            <img src="images/ensemble-soie-noir.jpeg" class="card-img-top" alt="Ensemble Soie Noir">
+                            <div class="card-overlay">
+                                <button class="btn btn-white-custom me-2" onclick="openProductModal('ensemble-soie-noir')">
+                                    <i class="fas fa-eye me-2"></i>Voir Détails
+                                </button>
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20l'Ensemble%20en%20Drap%20de%20Soie%20Noir" 
+                                   target="_blank" class="btn btn-primary-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                            <div class="new-badge">Nouvelle Collection</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ensemble Drap de Soie Noir</h5>
+                            <p class="card-text">Ensemble noir en drap de soie brodé, ceinturé d'un nœud orné de fil argenté.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-star me-1"></i>Soie</span>
+                                <span class="feature-tag"><i class="fas fa-gem me-1"></i>Fil Argenté</span>
                             </div>
                         </div>
                     </div>
@@ -542,6 +606,27 @@
                         </div>
                     </div>
                 </div>
+                 <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="700">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/robe-lin-bleue.jpeg" class="card-img-top" alt="Robe Lin Brodée Bleue">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20la%20Robe%20en%20Lin%20Brodée%20Bleue" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Robe Lin Brodée Bleue</h5>
+                            <p class="card-text">Robe longue en lin bleu, ornée de broderies artisanales colorées.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-leaf me-1"></i>Lin</span>
+                                <span class="feature-tag"><i class="fas fa-palette me-1"></i>Broderies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="col-lg-3 col-md-6 product-item" data-category="femme" data-aos="fade-up" data-aos-delay="400">
                     <div class="product-card">
@@ -775,6 +860,65 @@
         </div>
     </section>
 
+    <!-- Nouvelle section Accessoires -->
+    <section class="py-5" id="accessoires">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-gem me-2"></i>Collection Accessoires
+                </div>
+                <h2 class="section-title">Art & Décoration</h2>
+                <p class="section-subtitle">Portraits peints à la main et œuvres d'art traditionnelles</p>
+            </div>
+            
+            <div class="row g-4" id="accessoires-grid">
+                <div class="col-lg-3 col-md-6 product-item" data-category="accessoires" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/femme-foulard-jaune.jpeg" class="card-img-top" alt="Portrait Femme Foulard Jaune">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Portrait%20Femme%20au%20Foulard%20Jaune" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Femme au Foulard Jaune</h5>
+                            <p class="card-text">Portrait peint à la main d'une femme marocaine, magnifiée par un foulard fleuri et des bijoux traditionnels éclatants.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Peint Main</span>
+                                <span class="feature-tag"><i class="fas fa-crown me-1"></i>Traditionnel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-category="accessoires" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/femme-sourire.jpeg" class="card-img-top" alt="Portrait Femme Sourire">
+                            <div class="card-overlay">
+                                <a href="https://api.whatsapp.com/send?phone=212661777571&text=Bonjour,%20je%20suis%20intéressé(e)%20par%20le%20Portrait%20Femme%20au%20Sourire" 
+                                   target="_blank" class="btn btn-white-custom">
+                                    <i class="fab fa-whatsapp me-2"></i>Commander
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Femme au Sourire</h5>
+                            <p class="card-text">Portrait peint à la main d'une femme marocaine ornée de bijoux traditionnels, symbole de beauté ancestrale.</p>
+                            <div class="product-features">
+                                <span class="feature-tag"><i class="fas fa-paint-brush me-1"></i>Peint Main</span>
+                                <span class="feature-tag"><i class="fas fa-heart me-1"></i>Beauté</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-5 cta-section">
         <div class="container">
@@ -912,6 +1056,84 @@
        target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Added Product Detail Modal at the end before scripts -->
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productModalLabel">Détails du Produit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <!-- Image Carousel -->
+                        <div class="col-lg-7">
+                            <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators" id="carouselIndicators">
+                                    <!-- Indicators will be added dynamically -->
+                                </div>
+                                <div class="carousel-inner" id="carouselImages">
+                                    <!-- Images will be added dynamically -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Précédent</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Suivant</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Info -->
+                        <div class="col-lg-5">
+                            <div class="p-4 p-lg-5">
+                                <div class="product-badge mb-3" id="productBadge">
+                                    <!-- Badge will be added dynamically -->
+                                </div>
+                                <h2 class="product-title mb-3" id="productTitle">Nom du Produit</h2>
+                                <p class="product-description mb-4" id="productDescription">Description du produit</p>
+                                
+                                <div class="product-details mb-4">
+                                    <h6 class="mb-3">Caractéristiques :</h6>
+                                    <ul class="list-unstyled" id="productFeatures">
+                                        <!-- Features will be added dynamically -->
+                                    </ul>
+                                </div>
+                                
+                                <div class="product-info mb-4">
+                                    <div class="info-item">
+                                        <i class="fas fa-scissors text-primary me-2"></i>
+                                        <span>Disponible sur mesure</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-shipping-fast text-primary me-2"></i>
+                                        <span>Livraison partout au Maroc</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class="fas fa-award text-primary me-2"></i>
+                                        <span>Qualité artisanale garantie</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-actions">
+                                    <a href="#" id="whatsappLink" target="_blank" class="btn btn-whatsapp btn-lg w-100 mb-3">
+                                        <i class="fab fa-whatsapp me-2"></i>Commander sur WhatsApp
+                                    </a>
+                                    <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
+                                        <i class="fas fa-arrow-left me-2"></i>Retour au Catalogue
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
